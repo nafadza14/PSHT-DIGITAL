@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Kartu Warga PSHT - Persaudaraan Setia Hati Terate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --psht-red: #ff0000;
+            --psht-black: #0c0c0c;
+            --psht-white: #f8f8f8;
+            --psht-gold-light: #FFD700;
+            --psht-gold-dark: #B8860B;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--psht-white);
+            color: var(--psht-black);
+            overflow-x: hidden;
+            margin: 0;
+        }
+        .text-huge {
+            font-size: clamp(3.5rem, 12vw, 9rem);
+            line-height: 0.8;
+            letter-spacing: -0.06em;
+        }
+        .card-shadow { 
+            box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.4); 
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card-shadow:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 50px 100px -25px rgba(0, 0, 0, 0.5);
+        }
+        
+        .yellow-card-gradient {
+            background: linear-gradient(135deg, #FFD700 0%, #EAB308 50%, #B8860B 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .silver-card-gradient {
+            background: linear-gradient(135deg, #E2E8F0 0%, #CBD5E1 50%, #94A3B8 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .yellow-card-gradient::before, .silver-card-gradient::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.2) 1px, transparent 0);
+            background-size: 24px 24px;
+            opacity: 0.4;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(var(--rot, 0deg)); }
+            50% { transform: translateY(-20px) rotate(calc(var(--rot, 0deg) + 1.5deg)); }
+            100% { transform: translateY(0px) rotate(var(--rot, 0deg)); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+
+        @keyframes horizontal-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+            display: flex;
+            width: fit-content;
+            animation: horizontal-scroll 30s linear infinite;
+        }
+        .animate-scroll:hover {
+            animation-play-state: paused;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #000; border-radius: 10px; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "vite": "https://esm.sh/vite@^7.3.1"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

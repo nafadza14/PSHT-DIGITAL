@@ -1,0 +1,7 @@
+{
+  "name": "PSHT Digital - e-Kartu Warga",
+  "description": "Sistem Informasi Keanggotaan Digital Persaudaraan Setia Hati Terate (PSHT) dengan fitur pendaftaran, validasi, dan e-kartu digital.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
