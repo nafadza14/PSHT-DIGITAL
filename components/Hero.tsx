@@ -56,17 +56,8 @@ const Hero: React.FC<HeroProps> = ({ onStart, isLoggedIn, onDashboard }) => {
               className="bg-white w-44 h-44 rounded-full flex flex-col items-center justify-center group hover:scale-110 transition-all duration-500 shadow-2xl relative z-40 border-[12px] border-[#0c0c0c]"
             >
               <div className="absolute inset-0 rounded-full border border-gray-100 group-hover:scale-150 transition-all duration-700 opacity-20"></div>
-              {isLoggedIn ? (
-                <>
-                  <span className="text-black font-black text-xs uppercase tracking-[0.2em] mb-1">BUKA</span>
-                  <span className="text-black font-black text-sm uppercase tracking-[0.2em]">PANEL</span>
-                </>
-              ) : (
-                <>
-                  <span className="text-black font-black text-xs uppercase tracking-[0.2em] mb-1">MULAI</span>
-                  <span className="text-black font-black text-sm uppercase tracking-[0.2em]">DAFTAR</span>
-                </>
-              )}
+              <span className="text-black font-black text-xs uppercase tracking-[0.2em] mb-1">DAPATKAN</span>
+              <span className="text-black font-black text-sm uppercase tracking-[0.2em]">KARTU</span>
               <div className="mt-4 animate-bounce text-red-600">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
               </div>
